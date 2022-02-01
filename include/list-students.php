@@ -1,0 +1,52 @@
+
+<?php 
+
+include "connectdb.php"; 
+
+$sql = "SELECT * FROM student"; 
+
+$sth = $db->prepare($sql); 
+
+$sth->execute(); 
+
+?> 
+
+ 
+
+<table> 
+
+    <thead> 
+
+    <tr> 
+
+        <th>Id</th> 
+
+        <th>Voornaam</th> 
+
+        <th>Achternaam</th> 
+
+    </tr> 
+
+    </thead> 
+
+    <tbody> 
+
+    <?php while($row = $sth->fetch()) { ?> 
+
+        <tr> 
+
+            <td><?php echo $row["id"]; ?></td> 
+
+            <td><?php echo $row["voornaam"]; ?></td> 
+
+            <td><?php echo $row["achternaam"]; ?></td> 
+
+        </tr> 
+
+    <?php } ?> 
+
+    </tbody> 
+
+</table> 
+
+

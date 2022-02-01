@@ -1,19 +1,8 @@
-<?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "basiccrud";
-$voornaam = "thomas";
-$achternaam = "dekker";
-$id = "1";
-// set DSN
-$dsn = 'mysql:host=' . $host . ';dbname=' . $dbname;
+<?php include "include/head.php"; ?>
 
-$pdo = new PDO($dsn, $user, $pass);
+<a href="create-student-form.php">Student toevoegen</a> 
 
-// insrt data
-
-$sql = "INSERT INTO student(id, voornaam, achternaam) VALUES (:id, :voornaam, :achternaam, :id,)";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([ 'id' => $id, 'voornaam' => $voornaam, 'achternaam' => $achternaam]);
-echo "Data is toegevoegd";
+<?php include "include/list-students.php"; ?> 
+<?php include "include/footer.php"; ?>
+</body>
+</html>
