@@ -13,7 +13,7 @@ $sth->execute();
 
  
 
-<table> 
+<table class="table"> 
 
     <thead> 
 
@@ -48,5 +48,6 @@ $sth->execute();
     </tbody> 
 
 </table> 
+
 
 
