@@ -23,8 +23,8 @@ $sth->execute();
 
         <th>Voornaam</th> 
 
-        <th>Achternaam</th> 
-
+        <th>Achternaam</th>
+        <a href="update-student-form.php?id=<?php echo $row["id"]?>">Wijzig</a>
     </tr> 
 
     </thead> 
