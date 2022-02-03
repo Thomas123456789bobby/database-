@@ -2,7 +2,6 @@
 <div class="container">
 
 <a href="create-student-form.php" class="btn btn-secondary mt-2 mb-2  ">Student toevoegen</a>
-<a href="update-student-form.php" class="btn btn-secondary mt-2 mb-2  ">Student update</a>
 <?php include "include/list-students.php"; ?> 
 </div>
 <?php include "include/footer.php"; ?>

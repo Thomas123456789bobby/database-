@@ -7,7 +7,7 @@ include "connectdb.php";
 
 $sql = "UPDATE student SET voornaam = :voornaam, achternaam = :achternaam WHERE id = :id ";
 $stmt = $db->prepare($sql);
-$stmt->execute(['voornaam' => $voornaam, 'achternaam' => $achternaam , 'id' => $id]);
+$stmt->execute(['voornaam' => $voornaam, 'achternaam' => $achternaam]);
 echo "Data is geudateerd";
  
 ?>

@@ -24,7 +24,7 @@ $sth->execute();
         <th>Voornaam</th> 
 
         <th>Achternaam</th>
-        <a href="update-student-form.php?id=<?php echo $row["id"]?>">Wijzig</a>
+        
     </tr> 
 
     </thead> 
@@ -40,7 +40,7 @@ $sth->execute();
             <td><?php echo $row["voornaam"]; ?></td> 
 
             <td><?php echo $row["achternaam"]; ?></td> 
-
+            <td><a href="update-student-form.php?id=<?php echo $row["id"]?>">Wijzig</a></td> 
         </tr> 
 
     <?php } ?> 

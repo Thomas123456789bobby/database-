@@ -1,7 +1,5 @@
 <?php
-include "connectdb.php";
-$id = empty($_GET["id"]) ? null : $_GET["id"];
-
+include "connectdb.php"; 
 
 $sql = "SELECT * FROM student WHERE id=:id"; 
 
@@ -9,11 +7,12 @@ $sql = "SELECT * FROM student WHERE id=:id";
 
 $params = array( 
 
-    ":id" => $id 
+    ":id" => $id
+     
 
-);
+); 
 
-
+ 
 
 try { 
 
@@ -27,9 +26,8 @@ try {
 
     echo $e->getMessage(); 
 
-}
-
-$voornaam = $student["voornaam"];
+} 
+$student = $sth->fetch(PDO::FETCH_ASSOC);  
 ?>
 
 
