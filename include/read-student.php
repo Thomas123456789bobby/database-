@@ -27,7 +27,7 @@ try {
     echo $e->getMessage(); 
 
 } 
-$student = $sth->fetch(PDO::FETCH_ASSOC);  
+
 ?>
 
 

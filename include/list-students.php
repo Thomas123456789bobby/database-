@@ -40,7 +40,8 @@ $sth->execute();
             <td><?php echo $row["voornaam"]; ?></td> 
 
             <td><?php echo $row["achternaam"]; ?></td> 
-            <td><a href="update-student-form.php?id=<?php echo $row["id"]?>">Wijzig</a></td> 
+            <td><a class="btn btn-warning" href="update-student-form.php?id=<?php echo $row["id"]?>">Wijzig</a></td>
+            <td><a class="btn btn-danger" href="del.php?id=<?php echo $row["id"]?>">verwijden</a></td> 
         </tr> 
 
     <?php } ?> 

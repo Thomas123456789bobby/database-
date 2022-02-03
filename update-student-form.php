@@ -1,16 +1,17 @@
 <?php include "include/head.php"; ?>
+<?php $id = $_GET["id"]  ?>
 <?php include "include/read-student.php";?> 
 <div class="container">
-    
+      
            <form action="include/update-student.php" method="POST">
            
           <div class="form-group">
            <h2>wat is je voornaam</h2>
-           <input class="form-control" type="text" name="voornaam">
+           <input class="form-control" type="text" value="<?php echo $student["voornaam"];?>"  name="voornaam">
            <br>
     
            <h2>wat is je achternaam</h2>
-           <input class="form-control" type="text" name="achternaam",>
+           <input class="form-control" type="text" value="<?php echo $student["achternaam"];?>"  name="achternaam",>
            <br>
 
            <input type="hidden" name="id" value="<?php echo $student["id"]; ?>"> 
