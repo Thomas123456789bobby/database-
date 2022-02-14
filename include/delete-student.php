@@ -1,5 +1,5 @@
 <?php
-$id = $_POST['id'];
+$id = $_GET['id'];
 
 include "connectdb.php";
 $sql = "DELETE FROM student WHERE id = :id" ;
