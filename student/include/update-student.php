@@ -34,5 +34,5 @@ $stmt->execute([':voornaam' => $voornaam,
     ':woonplaats' => $woonplaats, 
     ':postcode' => $postcode , 
     ':id' => $id]);
-header("Location:../index.php");
+header("Location:../students.php");
 ?>

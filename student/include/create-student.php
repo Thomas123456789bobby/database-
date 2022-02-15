@@ -17,5 +17,5 @@ $stmt = $db->prepare($sql);
 $stmt->execute(['voornaam' => $voornaam, 'achternaam' => $achternaam , 'email' => $email, 'telefoonnummer' => $telefoonnummer,
  'straatnaam' => $straatnaam, 'huisnummer'=> $huisnummer, 'huisnummertoevoeging' => $huisnummertoevoeging, 'woonplaats' => $woonplaats, 'postcode' => $postcode]);
 echo "Data is toegevoegd";
-header("Location:../index.php");
+header("Location:../students.php");
 ?>
