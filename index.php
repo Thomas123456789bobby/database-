@@ -1,5 +1,5 @@
 <?php 
-include "student/include/head.php";
-include "student/include/footer.php";
-
+include "include/head.php";
+include "include/footer.php";
+header("Location:student/students.php");
 ?>

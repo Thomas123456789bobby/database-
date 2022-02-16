@@ -9,6 +9,7 @@ $huisnummer = $_POST['huisnummer'];
 $huisnummertoevoeging = $_POST['huisnummertoevoeging'];
 $woonplaats = $_POST['woonplaats'];
 $postcode = $_POST['postcode'];
+$klasid = $_POST['klasid'];
 
 
 include "connectdb.php";
@@ -21,7 +22,8 @@ telefoonnummer = :telefoonnummer,
  huisnummer = :huisnummer,
   huisnummertoevoeging = :huisnummertoevoeging, 
   woonplaats = :woonplaats,
-   postcode = :postcode
+   postcode = :postcode ,
+   klasid = :klasid
     WHERE id = :id ";
 $stmt = $db->prepare($sql);
 $stmt->execute([':voornaam' => $voornaam,
@@ -33,6 +35,7 @@ $stmt->execute([':voornaam' => $voornaam,
    ':huisnummertoevoeging' => $huisnummertoevoeging,
     ':woonplaats' => $woonplaats, 
     ':postcode' => $postcode , 
-    ':id' => $id]);
+    ':id' => $id ,
+     ':klasid' => $klasid]);
 header("Location:../students.php");
 ?>

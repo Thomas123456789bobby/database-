@@ -1,11 +1,11 @@
 <?php include "../include/head.php"; ?>
 <?php $id = $_GET["id"]  ?>
-<?php include "include/read-student.php";?> 
+<?php include "include/read-klas.php";?> 
 <div class="container">
       
-           <form action="include/update-student.php" method="POST">
+           <form action="include/update-klas.php" method="POST">
            
-      <?php include "include/inputs-student.php"; ?>
+      <?php include "include/inputs-klas.php"; ?>
 
           </div>
           <div class="box3">
@@ -20,4 +20,3 @@
     </div>
     
     <?php include "../include/footer.php"; ?>
-

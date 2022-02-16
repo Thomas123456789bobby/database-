@@ -7,6 +7,22 @@
            <input class="form-control" type="text" value="<?php if (empty($student["achternaam"])){echo "";}else {echo $student["achternaam"];}?>"name="achternaam" required>
            <br>
 
+           <h2>wat is je klas</h2>
+           <select name="klasid" class="form-control">
+
+                   <?php include "connectdb.php"; 
+
+                         $sql = "SELECT * FROM klas"; 
+
+                         $sth = $db->prepare($sql); 
+
+                         $sth->execute(); 
+
+
+                         while($klas = $sth->fetch()) { ?>
+                   <option value="<?php echo $klas["id"]; ?>"> <?php echo $klas["id"]; ?></option>
+                    <?php } ?>
+           </select>
            <h2>wat is je email</h2>
            <input class="form-control" type="email" value="<?php if (empty($student["email"])){echo "";}else {echo $student["email"];}?>"name="email" required>
               <br>

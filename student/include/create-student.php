@@ -9,13 +9,13 @@ $huisnummer = $_POST['huisnummer'];
 $huisnummertoevoeging = $_POST['huisnummertoevoeging'];
 $woonplaats = $_POST['woonplaats'];
 $postcode = $_POST['postcode'];
+$klasid = $_POST['klasid'];
 
 
-$sql = "INSERT INTO student(voornaam, achternaam, email, telefoonnummer, straatnaam, huisnummer, huisnummertoevoeging, woonplaats, postcode )
- VALUES (:voornaam, :achternaam, :email, :telefoonnummer, :straatnaam, :huisnummer, :huisnummertoevoeging, :woonplaats, :postcode)";
+$sql = "INSERT INTO student(voornaam, achternaam, email, telefoonnummer, straatnaam, huisnummer, huisnummertoevoeging, woonplaats, postcode, klasid)
+ VALUES (:voornaam, :achternaam, :email, :telefoonnummer, :straatnaam, :huisnummer, :huisnummertoevoeging, :woonplaats, :postcode, :klasid)";
 $stmt = $db->prepare($sql);
-$stmt->execute(['voornaam' => $voornaam, 'achternaam' => $achternaam , 'email' => $email, 'telefoonnummer' => $telefoonnummer,
- 'straatnaam' => $straatnaam, 'huisnummer'=> $huisnummer, 'huisnummertoevoeging' => $huisnummertoevoeging, 'woonplaats' => $woonplaats, 'postcode' => $postcode]);
+$stmt->execute(['voornaam' => $voornaam, 'achternaam' => $achternaam , 'email' => $email, 'telefoonnummer' => $telefoonnummer, 'straatnaam' => $straatnaam, 'huisnummer'=> $huisnummer, 'huisnummertoevoeging' => $huisnummertoevoeging, 'woonplaats' => $woonplaats, 'postcode' => $postcode, 'klasid' => $klasid]);
 echo "Data is toegevoegd";
 header("Location:../students.php");
 ?>

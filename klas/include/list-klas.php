@@ -3,7 +3,7 @@
 
 include "connectdb.php"; 
 
-$sql = "SELECT * FROM student"; 
+$sql = "SELECT * FROM klas"; 
 
 $sth = $db->prepare($sql); 
 
@@ -21,17 +21,13 @@ $sth->execute();
 
         <th>Id</th> 
 
-        <th>Voornaam</th> 
+        <th>code</th> 
 
-        <th>Achternaam</th>
+        <th>vestiging</th>
 
-        <th>straatnaam</th>
+        <th>sectie</th>
 
-        <th>huisnummer</th>
-
-        <th>woonplaats</th>
-
-        <th>klas</th>
+        <th>cohort</th>
         
     </tr> 
 
@@ -43,21 +39,18 @@ $sth->execute();
 
         <tr> 
 
-            <td class="studentNummer"><?php echo $row["id"]; ?></td> 
+            <td class="klasnummer"><?php echo $row["id"]; ?></td> 
 
-            <td><?php echo $row["voornaam"]; ?></td> 
+            <td><?php echo $row["code"]; ?></td> 
 
-            <td><?php echo $row["achternaam"]; ?></td> 
+            <td><?php echo $row["vestiging"]; ?></td> 
 
-            <td><?php echo $row["straatnaam"]; ?></td>
+            <td><?php echo $row["sectie"]; ?></td>
 
-            <td><?php echo $row["woonplaats"]; ?></td>
+            <td><?php echo $row["cohort"]; ?></td>
 
-            <td><?php echo $row["achternaam"]; ?></td>
-
-            <td><?php echo $row["klasid"]; ?></td>
-            <td><a class="btn btn-warning" href="update-student-form.php?id=<?php echo $row["id"]?>">Wijzig</a></td>
-            <td><a class="btn btn-danger delete-knop" onclick="confirmDelete()">verwijder</a></td>
+            <td><a class="btn btn-warning" href="update-klas.php?id=<?php echo $row["id"]?>">Wijzig</a></td>
+            <td><a class="btn btn-danger delete-knop1" onclick="confirmDelete()">verwijder</a></td>
         </tr> 
 
     <?php } ?> 
